@@ -1,0 +1,91 @@
+.windowsScreen {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+.windowsScreen img {
+  width: 750px;
+  height: 500px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 18%;
+  left: 0;
+  margin: auto;
+}
+
+.loadingFooter {
+  width: 100%;
+  height: 15%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(184, 184, 184);
+}
+
+.gradientBar {
+  width: 100%;
+  height: 15%;
+  background: linear-gradient(270deg, #0036e1, #6583e1, #a9b5dd);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 10s ease infinite;
+  -moz-animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.barSection{
+  margin-top: 2%;
+}
+.startingText {
+  text-align: center;
+  font-size: 15px;
+  font-family: 'MS sans-serif', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.loadingBar {
+  position: relative;
+  text-align: center;
+  height: 10px;
+  width: 270px;
+  border: 1px solid rgb(216, 216, 216);
+  display: inline-block
+}
+
+.filler {
+  background: #0036e1;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.barSection {
+  text-align: center;
+}
+
+.copyrightText {
+  text-align: center;
+  font-size: 15px;
+  font-family: 'MS sans-serif', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+}
