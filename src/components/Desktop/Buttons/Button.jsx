@@ -6,7 +6,8 @@ import Draggable from 'react-draggable';
 export default function Button({ src, name }) {
   const clickedStyle = { 
     backgroundColor: 'rgba(219, 219, 219, 0.514)', 
-    color: 'white' };
+    color: 'white',
+    border: '1px solid rgb(185, 185, 185)' };
   const normalStyle = { 
     backgroundColor: '', 
     color: 'white' };

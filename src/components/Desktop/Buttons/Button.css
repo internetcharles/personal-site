@@ -2,7 +2,7 @@
   height: 60px;
   width: 60px;
   position: relative;
-  margin-left: 25px;
+  margin-left: 22px;
 
   -webkit-user-drag: none;
   -khtml-user-drag: none;
@@ -23,6 +23,6 @@
   font-family: 'MS sans-serif', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
   display: inline-block;
-  margin-left: 25px;
+  margin-left: 22px;
   color: rgb(219, 219, 219);
 }
