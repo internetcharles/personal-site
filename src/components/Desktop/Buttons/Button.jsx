@@ -4,30 +4,24 @@ import PropTypes from 'prop-types';
 import Draggable from 'react-draggable';
 
 export default function Button({ src, name }) {
-  const clickedStyle = { 
-    backgroundColor: 'rgba(219, 219, 219, 0.514)', 
-    color: 'white',
-    border: '1px solid rgb(185, 185, 185)' };
-  const normalStyle = { 
-    backgroundColor: '', 
-    color: 'white' };
+
   const [clicked, setClicked] = useState(false);
   const [iconStyle, setIconStyle] = useState(false);
 
   const handleSelect = () => {
     if(clicked) {
       setClicked(false);
-      setIconStyle(normalStyle);
+      setIconStyle(styles.icon);
     }
     else {
       setClicked(true);
-      setIconStyle(clickedStyle);
+      setIconStyle(styles.clickedStyle);
     }
   };
 
   return (
     <Draggable defaultClassName={styles.icon}>
-      <div onClick={handleSelect} style={iconStyle} className={styles.icon}>
+      <div onClick={handleSelect} className={iconStyle}>
         <img className={styles.image} src={src} alt={name} />
         <div className={styles.buttonText}>{name}</div>
       </div>
