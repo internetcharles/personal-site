@@ -11,13 +11,6 @@ export default function StartBar() {
     minutes < 10 ? minutes = '0' + minutes : null;
     return hours + ':' + minutes;
   };
-  const getDate = () => {
-    const date = new Date();
-    const month = date.getMonth();
-    const day = date.getDate();
-    const year = date.getFullYear();
-    return month + '/' + day + '/' + year;
-  };
 
   return (
     <div className={styles.bar}>
@@ -26,8 +19,8 @@ export default function StartBar() {
         <img className={styles.logo} src="src/assets/windows-start-logo.png" />
         <div className={styles.start}>Start</div>
         <div className={styles.dateBox}>
+          <img className={styles.volume} src="src\assets\Icon_5.ico" />
           <div className={styles.time}>{getTime()}</div>
-          <div className={styles.date}>{getDate()}</div>
         </div>
       </div>
     </div>

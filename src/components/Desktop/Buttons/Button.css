@@ -2,8 +2,6 @@
   height: 60px;
   width: 60px;
   position: relative;
-  margin-left: 22px;
-
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;
@@ -15,14 +13,15 @@
   width: 110px;
   height: 90px;
   display: block;
+  padding-top: 5px;
+  text-align: center;
+  margin-left: 20px
 }
 
 .buttonText {
-  text-align: center;
   font-size: 14px;
   font-family: 'MS sans-serif', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
   display: inline-block;
-  margin-left: 22px;
   color: rgb(219, 219, 219);
 }

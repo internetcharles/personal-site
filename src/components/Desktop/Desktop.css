@@ -6,4 +6,6 @@
   height: 100%;
   background: rgb(26,24,52);
   background: linear-gradient(90deg, rgba(26,24,52,1) 0%, rgba(75,33,101,1) 41%, rgba(1,7,88,1) 95%);
+  display: flex;
+  flex-direction: column;
 }
