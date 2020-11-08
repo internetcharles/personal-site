@@ -13,7 +13,7 @@ const BootScreen = () => {
       if(percentage >= 100) {
         clearInterval(id);
       } else {
-        setPercentage(percentage => percentage + 10);
+        setPercentage(percentage => percentage + 8);
       }
     }
   }, []);
