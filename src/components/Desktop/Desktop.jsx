@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Buttons/Button';
+import Clippy from './Clippy/Clippy';
 import styles from './Desktop.css';
 import GreetingWindow from './GreetingWindow/GreetingWindow';
 import StartBar from './StartBar/StartBar';
@@ -12,6 +13,7 @@ export default function Desktop() {
       <Button src="src\assets\Write.ico" name="About Me" />
       <Button src="src\assets\Icon_2.ico" name="My Resume" />
       <GreetingWindow />
+      <Clippy />
       <StartBar />
     </div>
   );

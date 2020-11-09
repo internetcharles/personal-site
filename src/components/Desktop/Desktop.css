@@ -9,3 +9,9 @@
   display: flex;
   flex-direction: column;
 }
+
+.underConstruction {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}

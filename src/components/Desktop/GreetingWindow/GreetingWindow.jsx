@@ -7,7 +7,7 @@ import styles from './GreetingWindow.css';
 export default function GreetingWindow() {
   return (
     <Draggable
-      defaultPosition={{ x: 400, y: 100 }}>
+      defaultPosition={{ x: 150, y: 100 }}>
       <div className={styles.wholeWindow}>
         <div className={styles.innerBorder}>
           <div className={styles.documentBar}>
