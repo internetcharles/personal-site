@@ -6,15 +6,14 @@ import styles from './GreetingWindow.css';
 
 
 export default function GreetingWindow() {
-  const [window, setWindow] = useState(true);
   return (
-    window ? <Draggable
+    <Draggable
       defaultPosition={{ x: 150, y: 100 }}>
       <div className={styles.wholeWindow}>
         <div className={styles.innerBorder}>
           <div className={styles.documentBar}>
             <img className={styles.iconOne} src="src\assets\Icon_1.ico" />
-            <span className={styles.windowsText}>Hello World - Notepad</span>
+            <span className={styles.windowsText}>Hello - Notepad</span>
             <div className={styles.minimizeExit}>
               <img src="src\assets\minimise-btn.jpg" />
               <img src="src\assets\close-btn.jpg" onClick={() => setWindow(false)} />

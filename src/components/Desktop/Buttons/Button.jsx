@@ -1,14 +1,18 @@
+/* eslint-disable max-len */
 import React, { useState } from 'react';
 import styles from './Button.css';
 import PropTypes from 'prop-types';
 import Draggable from 'react-draggable';
 
-export default function Button({ src, name }) {
+export default function Button({ src, name, handleClick }) {
 
   const [clicked, setClicked] = useState(false);
   const [iconStyle, setIconStyle] = useState(false);
 
-  const handleSelect = () => {
+  const clicks = [];
+  let timeout;
+
+  const singleClick = () => {
     if(clicked) {
       setClicked(false);
       setIconStyle(styles.icon);
@@ -19,9 +23,26 @@ export default function Button({ src, name }) {
     }
   };
 
+  const doubleClick = () => {
+    handleClick();
+  };
+
+  const clickHandler = (event) => {
+    event.preventDefault();
+    clicks.push(new Date().getTime());
+    window.clearTimeout(timeout);
+    timeout = window.setTimeout(() => {
+      if(clicks.length > 1 && clicks[clicks.length - 1] - clicks[clicks.length - 2] < 250) {
+        doubleClick(event.target);
+      } else {
+        singleClick(event.target);
+      }
+    }, 250);
+  };
+
   return (
     <Draggable defaultClassName={styles.icon}>
-      <div onClick={handleSelect} className={iconStyle}>
+      <div onClick={clickHandler} className={iconStyle}>
         <img className={styles.image} src={src} alt={name} />
         <div className={styles.buttonText}>{name}</div>
       </div>
@@ -31,7 +52,8 @@ export default function Button({ src, name }) {
 
 Button.propTypes = {
   src: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  handleClick: PropTypes.func
 };
 
 
