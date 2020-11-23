@@ -14,7 +14,7 @@ export default function Desktop() {
   const [aboutMe, setAboutMe] = useState(false);
 
   const handleAboutClick = () => {
-    setAboutMe(true);
+    !aboutMe ? setAboutMe(true) : setAboutMe(false);
   };
 
   const greetingDisplayed = useSelector(state => state.greetingDisplayed);
@@ -29,7 +29,7 @@ export default function Desktop() {
       <Button src="src\assets\Write.ico" name="About Me" handleAboutClick={handleAboutClick} section="about" />
       <Button src="src\assets\Icon_2.ico" name="My Resume" />
       { greetingDisplayed ? <GreetingWindow /> : null }
-      { aboutMe ? <About /> : null }
+      { aboutMe ? <About handleAboutClick={handleAboutClick} /> : null }
       <Clippy />
       <StartBar />
     </div>

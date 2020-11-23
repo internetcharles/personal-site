@@ -7,7 +7,7 @@ import { setAbout } from '../../../actions/displayActions';
 import styles from './About.css';
 
 
-export default function About(props) {
+export default function About({ handleAboutClick }) {
 
   const dispatch = useDispatch();
 
@@ -26,7 +26,7 @@ export default function About(props) {
             <span className={styles.windowsText}>About Me - Notepad</span>
             <div className={styles.minimizeExit}>
               <img src="src\assets\minimise-btn.jpg" />
-              <img src="src\assets\close-btn.jpg" onClick={handleClose} />
+              <img src="src\assets\close-btn.jpg" onClick={handleAboutClick} />
             </div>
           </div>
           <div className={styles.fileButtons}>
