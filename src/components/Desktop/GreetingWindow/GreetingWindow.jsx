@@ -1,12 +1,21 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-len */
-import React, { useState } from 'react';
+import React from 'react';
 import Draggable from 'react-draggable';
+import { useDispatch } from 'react-redux';
+import { setGreeting } from '../../../actions/displayActions';
 import styles from './GreetingWindow.css';
 
 
 export default function GreetingWindow() {
-  const [window, setWindow] = useState(true);
+
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(setGreeting(false));
+    console.log('hello');
+  };
+
   return (
     window ? <Draggable
       defaultPosition={{ x: 150, y: 100 }}>
@@ -14,10 +23,10 @@ export default function GreetingWindow() {
         <div className={styles.innerBorder}>
           <div className={styles.documentBar}>
             <img className={styles.iconOne} src="src\assets\Icon_1.ico" />
-            <span className={styles.windowsText}>Hello World - Notepad</span>
+            <span className={styles.windowsText}>Hello - Notepad</span>
             <div className={styles.minimizeExit}>
               <img src="src\assets\minimise-btn.jpg" />
-              <img src="src\assets\close-btn.jpg" onClick={() => setWindow(false)} />
+              <img src="src\assets\close-btn.jpg" onClick={handleClick} />
             </div>
           </div>
           <div className={styles.fileButtons}>
@@ -31,8 +40,10 @@ export default function GreetingWindow() {
               Welcome to my desktop. Here you can view my portfolio, resume, and learn
               a little bit more about me.
             </p>
-            <p>For example, did you know that I cannot die?</p>
-            <p>I will fill this with relevant information later.</p>
+            <p>Here are some cool links:</p>
+            <p>Portfolio</p>
+            <p>Resume</p>
+            <p>Ongoing Projects</p>
           </div>
         </div>
       </div>

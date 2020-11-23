@@ -2,10 +2,20 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 import Draggable from 'react-draggable';
-import styles from './GreetingWindow.css';
+import { useDispatch } from 'react-redux';
+import { setAbout } from '../../../actions/displayActions';
+import styles from './About.css';
 
 
-export default function GreetingWindow() {
+export default function About(props) {
+
+  const dispatch = useDispatch();
+
+  const handleClose = () => {
+    dispatch(setAbout(false));
+    console.log('hello');
+  };
+
   return (
     <Draggable
       defaultPosition={{ x: 150, y: 100 }}>
@@ -13,10 +23,10 @@ export default function GreetingWindow() {
         <div className={styles.innerBorder}>
           <div className={styles.documentBar}>
             <img className={styles.iconOne} src="src\assets\Icon_1.ico" />
-            <span className={styles.windowsText}>Hello - Notepad</span>
+            <span className={styles.windowsText}>About Me - Notepad</span>
             <div className={styles.minimizeExit}>
               <img src="src\assets\minimise-btn.jpg" />
-              <img src="src\assets\close-btn.jpg" onClick={() => setWindow(false)} />
+              <img src="src\assets\close-btn.jpg" onClick={handleClose} />
             </div>
           </div>
           <div className={styles.fileButtons}>
@@ -26,15 +36,13 @@ export default function GreetingWindow() {
             <div>Help</div>
           </div>
           <div className={styles.textWindow}>
-            <p>Hi, I'm Charlie Smith, a full stack engineer from Portland, OR.
-              Welcome to my desktop. Here you can view my portfolio, resume, and learn
-              a little bit more about me.
-            </p>
-            <p>For example, did you know that I cannot die?</p>
-            <p>I will fill this with relevant information later.</p>
+            <p>Did you know?</p>
+            <p>I spent three years teaching on a small island in Japan.</p>
+            <p>I designed a virtual reality game called Chop It!</p>
+            <p>I'm a pretty nice guy.</p>
           </div>
         </div>
       </div>
-    </Draggable> : null
+    </Draggable>
   );
 }

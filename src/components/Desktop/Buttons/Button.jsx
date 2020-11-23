@@ -4,7 +4,7 @@ import styles from './Button.css';
 import PropTypes from 'prop-types';
 import Draggable from 'react-draggable';
 
-export default function Button({ src, name, handleClick }) {
+export default function Button({ src, name, handleAboutClick, section }) {
 
   const [clicked, setClicked] = useState(false);
   const [iconStyle, setIconStyle] = useState(false);
@@ -24,7 +24,11 @@ export default function Button({ src, name, handleClick }) {
   };
 
   const doubleClick = () => {
-    handleClick();
+    setClicked(true);
+    setIconStyle(styles.clickedStyle);
+    if(section == 'about') {
+      handleAboutClick();
+    }
   };
 
   const clickHandler = (event) => {
@@ -32,12 +36,12 @@ export default function Button({ src, name, handleClick }) {
     clicks.push(new Date().getTime());
     window.clearTimeout(timeout);
     timeout = window.setTimeout(() => {
-      if(clicks.length > 1 && clicks[clicks.length - 1] - clicks[clicks.length - 2] < 250) {
+      if(clicks.length > 1 && clicks[clicks.length - 1] - clicks[clicks.length - 2] < 200) {
         doubleClick(event.target);
       } else {
         singleClick(event.target);
       }
-    }, 250);
+    }, 200);
   };
 
   return (
