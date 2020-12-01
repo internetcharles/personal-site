@@ -13,22 +13,27 @@ import StartBar from './StartBar/StartBar';
 export default function Desktop() {
 
   const [aboutMe, setAboutMe] = useState(false);
+  const [portfolio, setPortfolio] = useState(false);
 
   const handleAboutClick = () => {
     !aboutMe ? setAboutMe(true) : setAboutMe(false);
   };
+  const handlePortfolioClick = () => {
+    !aboutMe ? setPortfolio(true) : setPortfolio(false);
+  };
 
   const greetingDisplayed = useSelector(state => state.greetingDisplayed);
+
 
   return (
     <div className={styles.desktop}>
       <Button src="src\assets\Dustbin.ico" name="Recycle Bin" location="desktop" />
-      <Button src="src\assets\Folder Open.ico" name="Portfolio" location="desktop" />
-      <Button src="src\assets\Write.ico" name="About Me" handleAboutClick={handleAboutClick} section="about" location="desktop" />
+      <Button src="src\assets\Folder Open.ico" name="Portfolio" handlePortfolioClick={handlePortfolioClick} section="portfolio" />
+      <Button src="src\assets\Write.ico" name="About Me" handleAboutClick={handleAboutClick} section="about" />
       <Button src="src\assets\Icon_2.ico" name="My Resume" />
       { greetingDisplayed ? <GreetingWindow /> : null }
       { aboutMe ? <About handleAboutClick={handleAboutClick} /> : null }
-      <Portfolio />
+      { portfolio ? <Portfolio handlePortfolioClick={handlePortfolioClick} /> : null}
       <Clippy />
       <StartBar />
     </div>

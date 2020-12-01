@@ -9,3 +9,9 @@ export const setGreeting = greetingDisplayed => ({
   type: SET_GREETING,
   payload: greetingDisplayed
 });
+
+export const SET_PORTFOLIO = 'SET_PORTFOLIO';
+export const setPortfolio = portfolioDisplayed => ({
+  type: SET_PORTFOLIO,
+  payload: portfolioDisplayed
+});

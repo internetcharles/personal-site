@@ -3,7 +3,7 @@
 import React from 'react';
 import Draggable from 'react-draggable';
 import { useDispatch } from 'react-redux';
-import { setGreeting } from '../../../actions/displayActions';
+import { setPortfolio } from '../../../actions/displayActions';
 import Button from '../Buttons/Button';
 import WindowIcon from '../Buttons/WindowIcon';
 import styles from './Portfolio.css';
@@ -14,7 +14,7 @@ export default function Portfolio() {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(setGreeting(false));
+    dispatch(setPortfolio(false));
     console.log('hello');
   };
 
@@ -38,7 +38,22 @@ export default function Portfolio() {
             <div>Help</div>
           </div>
           <div className={styles.iconList}>
-            <WindowIcon src="src\assets\NetworkComputer.ico" projectLink="https://github.com/Team-Formerly-Known-As-Mega-Calendar/Terminus-Front-End" name="Terminus" />
+            <WindowIcon 
+              src="src\assets\Font.ico" 
+              projectLink="https://page-trade.netlify.app/" 
+              name="PageTrade" />
+            <WindowIcon 
+              src="src\assets\Defragment.ico" 
+              projectLink="https://store.steampowered.com/app/812580/Chop_It/" 
+              name="Chop It!" />
+            <WindowIcon 
+              src="src\assets\Server.ico" 
+              projectLink="https://detestination.netlify.app/" 
+              name="Detestination" />
+            <WindowIcon 
+              src="src\assets\NetworkComputer.ico" 
+              projectLink="https://github.com/Team-Formerly-Known-As-Mega-Calendar/Terminus-Front-End" 
+              name="Terminus" />
           </div>
         </div>
       </div>

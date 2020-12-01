@@ -4,7 +4,7 @@ import styles from './Button.css';
 import PropTypes from 'prop-types';
 import Draggable from 'react-draggable';
 
-export default function Button({ src, name, handleAboutClick, section }) {
+export default function Button({ src, name, handlePortfolioClick, handleAboutClick, section }) {
 
   const [clicked, setClicked] = useState(false);
   const [iconStyle, setIconStyle] = useState(false);
@@ -28,6 +28,9 @@ export default function Button({ src, name, handleAboutClick, section }) {
     setIconStyle(styles.clickedStyle);
     if(section == 'about') {
       handleAboutClick();
+    }
+    if(section == 'portfolio') {
+      handlePortfolioClick();
     }
   };
 
