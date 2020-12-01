@@ -18,16 +18,16 @@
   margin-top: 10px;
 }
 
-.buttonText {
+.iconButtonText {
   font-size: 14px;
   font-family: 'MS sans-serif', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
   display: inline-block;
-  color: rgb(219, 219, 219);
+  color: rgb(0, 0, 0);
 }
 
 .clickedStyle { 
-  background-color: rgb(30, 0, 200);
+  background-color: rgb(38, 0, 255);
   color: rgb(255, 255, 255);
   border: 1px solid rgb(185, 185, 185);
   width: 108px;

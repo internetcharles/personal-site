@@ -7,6 +7,7 @@ import Button from './Buttons/Button';
 import Clippy from './Clippy/Clippy';
 import styles from './Desktop.css';
 import GreetingWindow from './GreetingWindow/GreetingWindow';
+import Portfolio from './Portfolio/Portfolio';
 import StartBar from './StartBar/StartBar';
 
 export default function Desktop() {
@@ -19,17 +20,15 @@ export default function Desktop() {
 
   const greetingDisplayed = useSelector(state => state.greetingDisplayed);
 
-
-
-  
   return (
     <div className={styles.desktop}>
-      <Button src="src\assets\Dustbin.ico" name="Recycle Bin" />
-      <Button src="src\assets\Folder Open.ico" name="Portfolio" />
-      <Button src="src\assets\Write.ico" name="About Me" handleAboutClick={handleAboutClick} section="about" />
+      <Button src="src\assets\Dustbin.ico" name="Recycle Bin" location="desktop" />
+      <Button src="src\assets\Folder Open.ico" name="Portfolio" location="desktop" />
+      <Button src="src\assets\Write.ico" name="About Me" handleAboutClick={handleAboutClick} section="about" location="desktop" />
       <Button src="src\assets\Icon_2.ico" name="My Resume" />
       { greetingDisplayed ? <GreetingWindow /> : null }
       { aboutMe ? <About handleAboutClick={handleAboutClick} /> : null }
+      <Portfolio />
       <Clippy />
       <StartBar />
     </div>
