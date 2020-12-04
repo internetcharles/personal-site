@@ -9,15 +9,7 @@ import WindowIcon from '../Buttons/WindowIcon';
 import styles from './Portfolio.css';
 
 
-export default function Portfolio() {
-
-  const dispatch = useDispatch();
-
-  const handleClick = () => {
-    dispatch(setPortfolio(false));
-    console.log('hello');
-  };
-
+export default function Portfolio({ handlePortfolioClick }) {
   return (
     window ? <Draggable
       defaultPosition={{ x: 150, y: 100 }}>
@@ -28,7 +20,7 @@ export default function Portfolio() {
             <span className={styles.windowsText}>Portfolio</span>
             <div className={styles.minimizeExit}>
               <img src="src\assets\minimise-btn.jpg" />
-              <img src="src\assets\close-btn.jpg" onClick={handleClick} />
+              <img src="src\assets\close-btn.jpg" onClick={handlePortfolioClick} />
             </div>
           </div>
           <div className={styles.fileButtons}>

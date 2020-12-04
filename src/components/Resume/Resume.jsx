@@ -2,20 +2,10 @@
 /* eslint-disable max-len */
 import React from 'react';
 import Draggable from 'react-draggable';
-import { useDispatch } from 'react-redux';
-import { setGreeting } from '../../../actions/displayActions';
-import styles from './GreetingWindow.css';
+import styles from './Resume.css';
 
 
-export default function GreetingWindow() {
-
-  const dispatch = useDispatch();
-
-  const handleClick = () => {
-    dispatch(setGreeting(false));
-    console.log('hello');
-  };
-
+export default function Resume({ handleResumeClick }) {
   return (
     window ? <Draggable
       defaultPosition={{ x: 150, y: 100 }}>
@@ -23,10 +13,10 @@ export default function GreetingWindow() {
         <div className={styles.innerBorder}>
           <div className={styles.documentBar}>
             <img className={styles.iconOne} src="src\assets\Icon_1.ico" />
-            <span className={styles.windowsText}>Hello - Notepad</span>
+            <span className={styles.windowsText}>Portfolio</span>
             <div className={styles.minimizeExit}>
               <img src="src\assets\minimise-btn.jpg" />
-              <img src="src\assets\close-btn.jpg" onClick={handleClick} />
+              <img src="src\assets\close-btn.jpg" onClick={handleResumeClick} />
             </div>
           </div>
           <div className={styles.fileButtons}>
@@ -35,13 +25,8 @@ export default function GreetingWindow() {
             <div>Format</div>
             <div>Help</div>
           </div>
-          <div className={styles.textWindow}>
-            <p>
-              Hi, I'm Charlie Smith, a full stack engineer from Portland, OR.
-              Welcome to my desktop. Here you can view my portfolio, resume, and learn
-              a little bit more about me.
-            </p>
-            <p>Simply click the icons to navigate through the OS.</p>
+          <div className={styles.iconList}>
+            Here is a link to my fancy RESUME.
           </div>
         </div>
       </div>
