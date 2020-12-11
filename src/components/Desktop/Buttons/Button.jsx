@@ -64,7 +64,11 @@ export default function Button({ src, name, handlePortfolioClick, handleResumeCl
 Button.propTypes = {
   src: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  handleClick: PropTypes.func
+  handleClick: PropTypes.func,
+  handlePortfolioClick: PropTypes.func,
+  handleResumeClick: PropTypes.func,
+  handleAboutClick: PropTypes.func,
+  section: PropTypes.string
 };
 
 

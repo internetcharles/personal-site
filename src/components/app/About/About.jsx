@@ -1,9 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-len */
-import React, { useState } from 'react';
+import React from 'react';
 import Draggable from 'react-draggable';
-import { useDispatch } from 'react-redux';
-import { setAbout } from '../../../actions/displayActions';
+import PropTypes from 'prop-types';
 import styles from './About.css';
 
 
@@ -29,13 +28,23 @@ export default function About({ handleAboutClick }) {
             <div>Help</div>
           </div>
           <div className={styles.textWindow}>
-            <p>Did you know?</p>
-            <p>I spent three years teaching on a small island in Japan.</p>
-            <p>I designed a virtual reality game called Chop It!</p>
-            <p>I'm a pretty nice guy.</p>
+            <p>Hi, I'm Charlie. I'm a full-stack engineer from Portland, OR.</p>
+            <p>I'm a dynamic and motivated person who has a passion for creating cool stuff!</p>
+            <p>Prior to working in tech I worked as an English teacher on an island of 8000 people in Japan.</p>
+            <p>You should play the video game I designed, "Chop It"! Click the icon in my portfolio folder for a link
+              to its Steam page!</p>
+            <p>I program because it's fun! It's a never-ending puzzle, and I think I'm pretty good at it.
+              I'm proficient in all kinds of technology, including Javascript, React, Redux, Express, Node and PostgreSQL.
+              This website was made in JS and React with Redux!</p>
+            <p>The good news for you is I'm currently available for work. E-mail me at <a href="mailto:internetcharles@gmail.com">internetcharles@gmail.com</a>!</p>
           </div>
         </div>
       </div>
     </Draggable>
   );
 }
+
+About.propTypes = {
+  handleAboutClick: PropTypes.func.isRequired
+};
+

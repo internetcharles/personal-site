@@ -6,9 +6,7 @@ import { useDispatch } from 'react-redux';
 import { setGreeting } from '../../../actions/displayActions';
 import styles from './GreetingWindow.css';
 
-
 export default function GreetingWindow() {
-
   const dispatch = useDispatch();
 
   const handleClick = () => {
@@ -16,9 +14,8 @@ export default function GreetingWindow() {
     console.log('hello');
   };
 
-  return (
-    window ? <Draggable
-      defaultPosition={{ x: 150, y: 100 }}>
+  return window ? (
+    <Draggable defaultPosition={{ x: 150, y: 100 }}>
       <div className={styles.wholeWindow}>
         <div className={styles.innerBorder}>
           <div className={styles.documentBar}>
@@ -37,14 +34,14 @@ export default function GreetingWindow() {
           </div>
           <div className={styles.textWindow}>
             <p>
-              Hi, I'm Charlie Smith, a full stack engineer from Portland, OR.
-              Welcome to my desktop. Here you can view my portfolio, resume, and learn
-              a little bit more about me.
+							Hi, I'm Charlie Smith, a full stack engineer from Portland, OR.
+							Welcome to my desktop. Here you can view my portfolio, resume, and
+							learn a little bit more about me.
             </p>
-            <p>Simply click the icons to navigate through the OS.</p>
+            <p>Simply double-click the icons to navigate through the OS.</p>
           </div>
         </div>
       </div>
-    </Draggable> : null
-  );
+    </Draggable>
+  ) : null;
 }
