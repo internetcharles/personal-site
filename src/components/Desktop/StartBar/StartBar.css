@@ -7,13 +7,71 @@
   height: 40px;
 }
 
-.logo {
-  width: 30px;
-  height: 30px;
+.logoBox {
+  border: 2px solid;
+  border-color: #dfdfdf #4e4e4e #4e4e4e #dfdfdf; 
+  margin-left: 3px;
+  width: 80px;
+  height: 32px;
 }
+
+.logo {
+  width: 25px;
+  height: 25px;
+  margin-top: 5px;
+  margin-left: 4px;
+}
+
+.start {
+  display: inline-block;
+  position: absolute;
+  margin-top: 8px;
+  margin-left: 2px;
+  font-size: 18px;
+  font-weight: bold;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 
 .shadingBar {
   background-color: rgb(212, 212, 212);
   height: 4px;
   width: 100%;
+}
+
+.dateBox {
+  display: inline;
+  position: absolute;
+  right: 0;
+  width: 80px;
+  height: 28px;
+  font-size: 16px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  border: 2px solid;
+  border-color: #4e4e4e #dfdfdf #dfdfdf#4e4e4e ; 
+  background-color: #acacac; 
+  margin-right: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.time {
+  margin: 6px 0;
+}
+
+.volume {
+  width: 25%;
+  float: left;
+  margin-left: 5px;
+  margin-top: 3px;
 }

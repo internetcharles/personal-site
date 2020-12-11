@@ -4,7 +4,7 @@ import styles from './Button.css';
 import PropTypes from 'prop-types';
 import Draggable from 'react-draggable';
 
-export default function Button({ src, name, handlePortfolioClick, handleResumeClick, handleAboutClick, section }) {
+export default function WindowIcon({ src, name, projectLink, location, handleAboutClick, section }) {
 
   const [clicked, setClicked] = useState(false);
   const [iconStyle, setIconStyle] = useState(false);
@@ -13,29 +13,28 @@ export default function Button({ src, name, handlePortfolioClick, handleResumeCl
   let timeout;
 
   const singleClick = () => {
-    if(clicked) {
+    if(clicked && location === 'desktop') {
       setClicked(false);
       setIconStyle(styles.icon);
     }
-    else {
+    else if(!clicked && location === 'desktop') {
       setClicked(true);
       setIconStyle(styles.clickedStyle);
+    }
+    else if(clicked && location === 'folder') {
+      setClicked(false);
+      setIconStyle(styles.clickedStyle);
+    }
+    else if(!clicked && location === 'folder') {
+      setClicked(true);
+      setIconStyle(styles.icon);
     }
   };
 
   const doubleClick = () => {
     setClicked(true);
     setIconStyle(styles.clickedStyle);
-    switch(section) {
-      case 'about':
-        handleAboutClick();
-        break;
-      case 'portfolio':
-        handlePortfolioClick();
-        break;
-      case 'resume':
-        handleResumeClick();
-    }
+    window.open(projectLink);
   };
 
   const clickHandler = (event) => {
@@ -55,13 +54,13 @@ export default function Button({ src, name, handlePortfolioClick, handleResumeCl
     <Draggable defaultClassName={styles.icon}>
       <div onClick={clickHandler} className={iconStyle}>
         <img className={styles.image} src={src} alt={name} />
-        <div className={styles.buttonText}>{name}</div>
+        <div className={styles.iconButtonText}>{name}</div>
       </div>
     </Draggable>
   );
 }
 
-Button.propTypes = {
+WindowIcon.propTypes = {
   src: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   handleClick: PropTypes.func
