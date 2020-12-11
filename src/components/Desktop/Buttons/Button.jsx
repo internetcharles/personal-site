@@ -26,14 +26,15 @@ export default function Button({ src, name, handlePortfolioClick, handleResumeCl
   const doubleClick = () => {
     setClicked(true);
     setIconStyle(styles.clickedStyle);
-    if(section == 'about') {
-      handleAboutClick();
-    }
-    if(section == 'portfolio') {
-      handlePortfolioClick();
-    }
-    if(section == 'resume') {
-      handleResumeClick();
+    switch(section) {
+      case 'about':
+        handleAboutClick();
+        break;
+      case 'portfolio':
+        handlePortfolioClick();
+        break;
+      case 'resume':
+        handleResumeClick();
     }
   };
 

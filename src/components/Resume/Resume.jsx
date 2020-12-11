@@ -13,7 +13,7 @@ export default function Resume({ handleResumeClick }) {
         <div className={styles.innerBorder}>
           <div className={styles.documentBar}>
             <img className={styles.iconOne} src="src\assets\Icon_1.ico" />
-            <span className={styles.windowsText}>Portfolio</span>
+            <span className={styles.windowsText}>Resume</span>
             <div className={styles.minimizeExit}>
               <img src="src\assets\minimise-btn.jpg" />
               <img src="src\assets\close-btn.jpg" onClick={handleResumeClick} />
@@ -25,8 +25,8 @@ export default function Resume({ handleResumeClick }) {
             <div>Format</div>
             <div>Help</div>
           </div>
-          <div className={styles.iconList}>
-            Here is a link to my fancy RESUME.
+          <div className={styles.textWindow}>
+            <p>Here is a link to my fancy <a href="src\assets\resume.pdf">RESUME</a>.</p>
           </div>
         </div>
       </div>
