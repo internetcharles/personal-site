@@ -30,6 +30,10 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: 'public' },
+        {
+          from: path.resolve(__dirname, '/src/assets/images'),
+          to: path.resolve(__dirname, 'dist')
+        },
       ]
     })
   ],
