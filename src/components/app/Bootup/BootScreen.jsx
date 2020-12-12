@@ -21,7 +21,7 @@ const BootScreen = () => {
   if(percentage < 100) return (
     <>
       <div className={styles.windowsScreen}>
-        <img src="..\..\..\assets\WindowsLogo.png" />
+        <img src="assets\WindowsLogo.png" />
       </div>
       <div className={styles.loadingFooter}>
         <div className={styles.gradientBar} />
