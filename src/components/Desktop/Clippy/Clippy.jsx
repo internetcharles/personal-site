@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
 import styles from './Clippy.css';
-import Clippy from '../../../assets/1zfr.gif'
+import ClippyGif from '../../../assets/1zfr.gif'
 
 export default function Clippy({ handlePortfolioClick }) {
 
@@ -23,7 +23,7 @@ export default function Clippy({ handlePortfolioClick }) {
 
   return (
     <div>
-      <img className={styles.clippy} src={Clippy} />
+      <img className={styles.clippy} src={ClippyGif} />
       <div className={styles.dialogueBox}>
         {message}
         <div className={styles.buttons}>        
