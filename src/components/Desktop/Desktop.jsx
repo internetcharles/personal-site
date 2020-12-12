@@ -10,6 +10,10 @@ import styles from './Desktop.css';
 import GreetingWindow from './GreetingWindow/GreetingWindow';
 import Portfolio from './Portfolio/Portfolio';
 import StartBar from './StartBar/StartBar';
+import Dustbin from '../../assets/Dustbin.ico';
+import WindowOpen from '../../assets/FolderOpen.ico';
+import Write from '../../assets/Write.ico';
+import Icon2 from '../../assets/Icon_2.ico';
 
 export default function Desktop() {
 
@@ -31,10 +35,10 @@ export default function Desktop() {
 
   return (
     <div className={styles.desktop}>
-      <Button src="..\..\..\src\assets\Dustbin.ico" name="Recycle Bin" location="desktop" />
-      <Button src="..\..\..\src\assets\Folder Open.ico" name="Portfolio" handlePortfolioClick={handlePortfolioClick} section="portfolio" />
-      <Button src="..\..\..\src\assets\Write.ico" name="About Me" handleAboutClick={handleAboutClick} section="about" />
-      <Button src="..\..\..\src\assets\Icon_2.ico" name="My Resume" handleResumeClick={handleResumeClick} section="resume" />
+      <Button src={Dustbin} name="Recycle Bin" location="desktop" />
+      <Button src={WindowOpen} name="Portfolio" handlePortfolioClick={handlePortfolioClick} section="portfolio" />
+      <Button src={Write} name="About Me" handleAboutClick={handleAboutClick} section="about" />
+      <Button src={Icon2} name="My Resume" handleResumeClick={handleResumeClick} section="resume" />
       { greetingDisplayed ? <GreetingWindow /> : null }
       { aboutMe ? <About handleAboutClick={handleAboutClick} /> : null }
       { portfolio ? <Portfolio handlePortfolioClick={handlePortfolioClick} /> : null}

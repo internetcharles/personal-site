@@ -3,6 +3,10 @@
 import React from 'react';
 import Draggable from 'react-draggable';
 import styles from './Resume.css';
+import CloseButton from '../../assets/close-btn.jpg';
+import MinimizeButton from '../../assets/minimise-btn.jpg';
+import IconOne from '../../assets/Icon_1.ico';
+import Resume from '../../assets/resume.pdf';
 
 
 export default function Resume({ handleResumeClick }) {
@@ -12,11 +16,11 @@ export default function Resume({ handleResumeClick }) {
       <div className={styles.wholeWindow}>
         <div className={styles.innerBorder}>
           <div className={styles.documentBar}>
-            <img className={styles.iconOne} src="src\assets\Icon_1.ico" />
+            <img className={styles.iconOne} src={IconOne} />
             <span className={styles.windowsText}>Resume</span>
             <div className={styles.minimizeExit}>
-              <img src="src\assets\minimise-btn.jpg" />
-              <img src="src\assets\close-btn.jpg" onClick={handleResumeClick} />
+              <img src={MinimizeButton} />
+              <img src={CloseButton} onClick={handleResumeClick} />
             </div>
           </div>
           <div className={styles.fileButtons}>
@@ -26,7 +30,7 @@ export default function Resume({ handleResumeClick }) {
             <div>Help</div>
           </div>
           <div className={styles.textWindow}>
-            <p>Here is a link to my fancy <a href="src\assets\resume.pdf">RESUME</a>.</p>
+            <p>Here is a link to my fancy <a href={Resume}>RESUME</a>.</p>
           </div>
         </div>
       </div>

@@ -5,6 +5,9 @@ import Draggable from 'react-draggable';
 import { useDispatch } from 'react-redux';
 import { setGreeting } from '../../../actions/displayActions';
 import styles from './GreetingWindow.css';
+import CloseButton from '../../../assets/close-btn.jpg';
+import MinimizeButton from '../../../assets/minimise-btn.jpg';
+import IconOne from '../../../assets/Icon_1.ico';
 
 export default function GreetingWindow() {
   const dispatch = useDispatch();
@@ -19,11 +22,11 @@ export default function GreetingWindow() {
       <div className={styles.wholeWindow}>
         <div className={styles.innerBorder}>
           <div className={styles.documentBar}>
-            <img className={styles.iconOne} src="src\assets\Icon_1.ico" />
+            <img className={styles.iconOne} src={IconOne} />
             <span className={styles.windowsText}>Hello - Notepad</span>
             <div className={styles.minimizeExit}>
-              <img src="src\assets\minimise-btn.jpg" />
-              <img src="src\assets\close-btn.jpg" onClick={handleClick} />
+              <img src={MinimizeButton} />
+              <img src={CloseButton} onClick={handleClick} />
             </div>
           </div>
           <div className={styles.fileButtons}>
