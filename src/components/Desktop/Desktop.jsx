@@ -31,10 +31,10 @@ export default function Desktop() {
 
   return (
     <div className={styles.desktop}>
-      <Button src="src\assets\Dustbin.ico" name="Recycle Bin" location="desktop" />
-      <Button src="src\assets\Folder Open.ico" name="Portfolio" handlePortfolioClick={handlePortfolioClick} section="portfolio" />
-      <Button src="src\assets\Write.ico" name="About Me" handleAboutClick={handleAboutClick} section="about" />
-      <Button src="src\assets\Icon_2.ico" name="My Resume" handleResumeClick={handleResumeClick} section="resume" />
+      <Button src="\assets\Dustbin.ico" name="Recycle Bin" location="desktop" />
+      <Button src="\assets\Folder Open.ico" name="Portfolio" handlePortfolioClick={handlePortfolioClick} section="portfolio" />
+      <Button src="\assets\Write.ico" name="About Me" handleAboutClick={handleAboutClick} section="about" />
+      <Button src="\assets\Icon_2.ico" name="My Resume" handleResumeClick={handleResumeClick} section="resume" />
       { greetingDisplayed ? <GreetingWindow /> : null }
       { aboutMe ? <About handleAboutClick={handleAboutClick} /> : null }
       { portfolio ? <Portfolio handlePortfolioClick={handlePortfolioClick} /> : null}
