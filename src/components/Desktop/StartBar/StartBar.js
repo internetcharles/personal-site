@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './StartBar.css';
+import StartButton from '../../../assets/windows-start-logo.png';
+import SoundIcon from '../../../assets/Icon_5.ico';
 
 export default function StartBar() {
 
@@ -16,10 +18,10 @@ export default function StartBar() {
     <div className={styles.bar}>
       <div className={styles.shadingBar} />
       <div className={styles.logoBox}>
-        <img className={styles.logo} src="src/assets/windows-start-logo.png" />
+        <img className={styles.logo} src={StartButton} />
         <div className={styles.start}>Start</div>
         <div className={styles.dateBox}>
-          <img className={styles.volume} src="src\assets\Icon_5.ico" />
+          <img className={styles.volume} src={SoundIcon} />
           <div className={styles.time}>{getTime()}</div>
         </div>
       </div>
