@@ -1,28 +1,32 @@
+/* eslint-disable max-len */
 import React, { useEffect, useRef, useState } from 'react';
-import Draggable from 'react-draggable';
 import styles from './Paint.css';
 import CloseButton from '../../assets/close-btn.jpg';
 import MinimizeButton from '../../assets/minimise-btn.jpg';
 import PaintIcon from '../../assets/Paint.ico';
+import { HuePicker } from 'react-color';
 import PropTypes from 'prop-types';
 
 function Paint({ handlePaintClick }) {
+  
 
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
+  const [brushColor, setBrushColor] = useState('black');
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    canvas.width = window.innerWidth * 2;
-    canvas.height = window.innerHeight * 2;
-    canvas.style.width = `${window.innerWidth}px`;
-    canvas.style.height = `${window.innerHeight}px`;
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    canvas.width  = canvas.offsetWidth * 2;
+    canvas.height = canvas.offsetHeight * 2;
 
     const context = canvas.getContext('2d');
+    
     context.scale(2, 2);
     context.lineCap = 'round';
-    context.strokeStyle = 'black';
+    context.strokeStyle = brushColor;
     context.lineWidth = 5;
     contextRef.current = context;
   }, []);
@@ -48,6 +52,13 @@ function Paint({ handlePaintClick }) {
     contextRef.current.stroke();
   };
 
+  const colorChange = (color, event) => {
+    setBrushColor(color.hex);
+    const canvas = canvasRef.current;
+    const context = canvas.getContext('2d');
+    context.strokeStyle = brushColor;
+  };
+
   return (
     window ?
       <div className={styles.wholeWindow}>
@@ -67,15 +78,15 @@ function Paint({ handlePaintClick }) {
             <div>Help</div>
           </div>
           <div className={styles.paintBar}>
-            <div>
-              <canvas
-                onMouseDown={startDrawing}
-                onMouseUp={finishDrawing}
-                onMouseMove={draw}
-                ref={canvasRef}
-              />
-            Test
-            </div>
+            <HuePicker color={brushColor} onChange={colorChange} />
+          </div>
+          <div className={styles.innerWindow}>
+            <canvas
+              onMouseDown={startDrawing}
+              onMouseUp={finishDrawing}
+              onMouseMove={draw}
+              ref={canvasRef}
+            />
           </div>
         </div>
       </div> : null

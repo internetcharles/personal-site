@@ -100,3 +100,8 @@
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.innerWindow {
+  width: 100%;
+  height: 89%;
+}

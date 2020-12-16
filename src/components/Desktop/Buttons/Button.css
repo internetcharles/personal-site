@@ -22,7 +22,7 @@
   font-size: 14px;
   font-family: 'MS sans-serif', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
-  display: inline-block;
+  display: absolute;
   color: rgb(219, 219, 219);
 }
 
