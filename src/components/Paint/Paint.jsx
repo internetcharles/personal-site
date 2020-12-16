@@ -59,6 +59,12 @@ function Paint({ handlePaintClick }) {
     context.strokeStyle = brushColor;
   };
 
+  const clearCanvas = () => {
+    const canvas = canvasRef.current;
+    const context = canvas.getContext('2d');
+    context.clearRect(0, 0, canvas.width, canvas.height);
+  };
+
   return (
     window ?
       <div className={styles.wholeWindow}>
@@ -74,7 +80,7 @@ function Paint({ handlePaintClick }) {
           <div className={styles.fileButtons}>
             <div>File</div>
             <div>Edit</div>
-            <div>Format</div>
+            <div onClick={clearCanvas}>Clear</div>
             <div>Help</div>
           </div>
           <div className={styles.paintBar}>

@@ -13,7 +13,7 @@ export default function About({ handleAboutClick }) {
 
   return (
     <Draggable
-      defaultPosition={{ x: 150, y: 100 }}>
+      defaultPosition={{ x: 120, y: 100 }}>
       <div className={styles.wholeWindow}>
         <div className={styles.innerBorder}>
           <div className={styles.documentBar}>

@@ -37,6 +37,9 @@ export default function GreetingWindow() {
           </div>
           <div className={styles.textWindow}>
             <p>
+              **This site is not optimized for mobile users! Hop on your desktop!**
+            </p>
+            <p>
 							Hi, I'm Charlie Smith, a full stack engineer from Portland, OR.
 							Welcome to my desktop. Here you can view my portfolio, resume, and
 							learn a little bit more about me.
