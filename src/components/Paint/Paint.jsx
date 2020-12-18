@@ -84,7 +84,7 @@ function Paint({ handlePaintClick }) {
             <div>Help</div>
           </div>
           <div className={styles.paintBar}>
-            <HuePicker color={brushColor} onChange={colorChange} />
+            <HuePicker color={brushColor} onChangeComplete={colorChange} />
           </div>
           <div className={styles.innerWindow}>
             <canvas
