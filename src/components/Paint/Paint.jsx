@@ -31,6 +31,12 @@ function Paint({ handlePaintClick }) {
     contextRef.current = context;
   }, []);
 
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const context = canvas.getContext('2d');
+    context.strokeStyle = brushColor;
+  }, [brushColor]);
+
   const startDrawing = ({ nativeEvent }) => {
     const { offsetX, offsetY } = nativeEvent;
     contextRef.current.beginPath();
@@ -54,9 +60,6 @@ function Paint({ handlePaintClick }) {
 
   const colorChange = (color, event) => {
     setBrushColor(color.hex);
-    const canvas = canvasRef.current;
-    const context = canvas.getContext('2d');
-    context.strokeStyle = brushColor;
   };
 
   const clearCanvas = () => {
