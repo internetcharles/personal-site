@@ -33,23 +33,25 @@ export default function Portfolio({ handlePortfolioClick }) {
             <div>Format</div>
             <div>Help</div>
           </div>
-          <div className={styles.iconList}>
-            <WindowIcon 
-              src={Font}
-              projectLink="https://page-trade.netlify.app/" 
-              name="PageTrade" />
-            <WindowIcon 
-              src={Defragment}
-              projectLink="https://store.steampowered.com/app/812580/Chop_It/" 
-              name="Chop It!" />
-            <WindowIcon 
-              src={Server}
-              projectLink="https://detestination.netlify.app/" 
-              name="Detestination" />
-            <WindowIcon 
-              src={NetworkComputer}
-              projectLink="https://github.com/Team-Formerly-Known-As-Mega-Calendar/Terminus-Front-End" 
-              name="Terminus" />
+          <div className={styles.textWindow}>
+            <div className={styles.iconList}>
+              <WindowIcon 
+                src={Font}
+                projectLink="https://page-trade.netlify.app/" 
+                name="PageTrade" />
+              <WindowIcon 
+                src={Defragment}
+                projectLink="https://store.steampowered.com/app/812580/Chop_It/" 
+                name="Chop It!" />
+              <WindowIcon 
+                src={Server}
+                projectLink="https://detestination.netlify.app/" 
+                name="Detestination" />
+              <WindowIcon 
+                src={NetworkComputer}
+                projectLink="https://github.com/Team-Formerly-Known-As-Mega-Calendar/Terminus-Front-End" 
+                name="Terminus" />
+            </div>
           </div>
         </div>
       </div>

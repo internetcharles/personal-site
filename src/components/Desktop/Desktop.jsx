@@ -16,6 +16,7 @@ import WindowOpen from '../../assets/FolderOpen.ico';
 import Write from '../../assets/Write.ico';
 import Icon2 from '../../assets/Icon_2.ico';
 import PaintIcon from '../../assets/Paint.ico';
+import RecycleBin from '../RecycleBin/RecycleBin';
 
 
 export default function Desktop() {
@@ -24,6 +25,7 @@ export default function Desktop() {
   const [portfolio, setPortfolio] = useState(false);
   const [resume, setResume] = useState(false);
   const [paint, setPaint] = useState(false);
+  const [recycle, setRecycle] = useState(false);
 
   const handleAboutClick = () => {
     !aboutMe ? setAboutMe(true) : setAboutMe(false);
@@ -39,17 +41,21 @@ export default function Desktop() {
     !paint ? setPaint(true) : setPaint(false);
   };
 
+  const handleRecycleClick = () => {
+    !recycle ? setRecycle(true) : setRecycle(false);
+  };
 
 
   const greetingDisplayed = useSelector(state => state.greetingDisplayed);
 
   return (
     <div className={styles.desktop}>
-      <Button src={Dustbin} name="Recycle Bin" location="desktop" />
+      <Button src={Dustbin} name="Recycle Bin" handleRecycleClick={handleRecycleClick} section="recycle" />
       <Button src={WindowOpen} name="Portfolio" handlePortfolioClick={handlePortfolioClick} section="portfolio" />
       <Button src={Write} name="About Me" handleAboutClick={handleAboutClick} section="about" />
       <Button src={Icon2} name="My Resume" handleResumeClick={handleResumeClick} section="resume" />
       <Button src={PaintIcon} name="Paint" handlePaintClick={handlePaintClick} section="paint" />
+      { recycle ? <RecycleBin handleRecycleClick={handleRecycleClick} /> : null}
       { greetingDisplayed ? <GreetingWindow /> : null }
       { aboutMe ? <About handleAboutClick={handleAboutClick} /> : null }
       { portfolio ? <Portfolio handlePortfolioClick={handlePortfolioClick} /> : null}

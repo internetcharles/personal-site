@@ -80,19 +80,21 @@ function Paint({ handlePaintClick }) {
           <div className={styles.fileButtons}>
             <div>File</div>
             <div>Edit</div>
-            <div onClick={clearCanvas}>Clear</div>
             <div>Help</div>
+            <div onClick={clearCanvas}>Clear</div>
           </div>
           <div className={styles.paintBar}>
             <HuePicker color={brushColor} onChangeComplete={colorChange} />
           </div>
-          <div className={styles.innerWindow}>
-            <canvas
-              onMouseDown={startDrawing}
-              onMouseUp={finishDrawing}
-              onMouseMove={draw}
-              ref={canvasRef}
-            />
+          <div className={styles.textWindow}>
+            <div className={styles.innerWindow}>
+              <canvas
+                onMouseDown={startDrawing}
+                onMouseUp={finishDrawing}
+                onMouseMove={draw}
+                ref={canvasRef}
+              />
+            </div>
           </div>
         </div>
       </div> : null

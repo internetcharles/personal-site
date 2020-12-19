@@ -5,8 +5,6 @@
   height: 700px;
   background-color: white;
   position: absolute;
-  left: 100px;
-  top: 150px;
 }
 
 .innerBorder {
@@ -69,14 +67,6 @@
   user-select: none;  
 }
 
-.paintBar {
-  display: flex;
-  background-color: rgb(221, 219, 219);
-  height: 26px;
-  align-items: center;
-  padding-left: 6px;
-}
-
 .minimizeExit {
   display: flex;
   justify-content: flex-end;
@@ -92,7 +82,7 @@
 
 .textWindow {
   border: 2px grey solid;
-  height: 89%;
+  height: 92%;
   width: 99.1%;
 }
 
@@ -101,7 +91,7 @@
   margin-right: 10px;
 }
 
-.innerWindow {
-  width: 100%;
-  height: 89%;
+.iconList {
+  flex-direction: row;
+  display: flex;
 }
