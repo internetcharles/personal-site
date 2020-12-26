@@ -24,7 +24,7 @@ export default function Portfolio({ handlePortfolioClick }) {
             <span className={styles.windowsText}>Portfolio</span>
             <div className={styles.minimizeExit}>
               <img src={MinimizeButton} />
-              <img src={CloseButton} onClick={handlePortfolioClick} />
+              <img src={CloseButton} className={styles.exit} onClick={handlePortfolioClick} />
             </div>
           </div>
           <div className={styles.fileButtons}>

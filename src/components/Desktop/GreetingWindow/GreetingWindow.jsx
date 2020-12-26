@@ -26,7 +26,7 @@ export default function GreetingWindow() {
             <span className={styles.windowsText}>Hello - Notepad</span>
             <div className={styles.minimizeExit}>
               <img src={MinimizeButton} />
-              <img src={CloseButton} onClick={handleClick} />
+              <img src={CloseButton} className={styles.exit} onClick={handleClick} />
             </div>
           </div>
           <div className={styles.fileButtons}>

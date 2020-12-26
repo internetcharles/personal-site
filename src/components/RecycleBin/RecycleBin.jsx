@@ -18,7 +18,9 @@ const RecycleBin = ({ handleRecycleClick }) => {
             <span className={styles.windowsText}>Recycle Bin</span>
             <div className={styles.minimizeExit}>
               <img src={MinimizeButton} />
-              <img src={CloseButton} onClick={handleRecycleClick} />
+              <img src={CloseButton} 
+                className={styles.exit} 
+                onClick={handleRecycleClick} />
             </div>
           </div>
           <div className={styles.fileButtons}>

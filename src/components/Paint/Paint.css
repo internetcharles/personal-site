@@ -16,6 +16,10 @@
   height: 99%;
 }
 
+.exit {
+  cursor: pointer;
+}
+
 .documentBar {
   height: 25px;
   width: 100%;

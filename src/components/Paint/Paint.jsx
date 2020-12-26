@@ -77,7 +77,7 @@ function Paint({ handlePaintClick }) {
             <span className={styles.windowsText}>Paint</span>
             <div className={styles.minimizeExit}>
               <img src={MinimizeButton} />
-              <img src={CloseButton} onClick={handlePaintClick} />
+              <img src={CloseButton} className={styles.exit} onClick={handlePaintClick} />
             </div>
           </div>
           <div className={styles.fileButtons}>
