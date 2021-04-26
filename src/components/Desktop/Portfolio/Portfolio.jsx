@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-len */
 import React from 'react';
@@ -36,6 +37,10 @@ export default function Portfolio({ handlePortfolioClick }) {
           <div className={styles.textWindow}>
             <div className={styles.iconList}>
               <WindowIcon 
+                src={Server}
+                projectLink="https://streamable.com/quzsjb" 
+                name="Actualize" />
+              <WindowIcon 
                 src={Font}
                 projectLink="https://page-trade.netlify.app/" 
                 name="PageTrade" />
@@ -43,10 +48,6 @@ export default function Portfolio({ handlePortfolioClick }) {
                 src={Defragment}
                 projectLink="https://store.steampowered.com/app/812580/Chop_It/" 
                 name="Chop It!" />
-              <WindowIcon 
-                src={Server}
-                projectLink="https://detestination.netlify.app/" 
-                name="Detestination" />
               <WindowIcon 
                 src={NetworkComputer}
                 projectLink="https://github.com/Team-Formerly-Known-As-Mega-Calendar/Terminus-Front-End" 
