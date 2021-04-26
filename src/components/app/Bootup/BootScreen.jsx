@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router';
 import styles from './BootScreen.css';
+import windows from '../../../assets/WindowsLogo.png';
 
 const BootScreen = () => {
 
@@ -21,7 +22,7 @@ const BootScreen = () => {
   if(percentage < 100) return (
     <>
       <div className={styles.windowsScreen}>
-        <img src="src\assets\WindowsLogo.png" />
+        <img src={windows} />
       </div>
       <div className={styles.loadingFooter}>
         <div className={styles.gradientBar} />

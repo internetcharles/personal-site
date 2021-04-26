@@ -16,13 +16,14 @@
   text-align: center;
   margin-left: 20px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .buttonText {
   font-size: 14px;
   font-family: 'MS sans-serif', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
-  display: inline-block;
+  display: absolute;
   color: rgb(219, 219, 219);
 }
 
@@ -32,4 +33,5 @@
   border: 1px solid rgb(185, 185, 185);
   width: 108px;
   height: 88px;
+  cursor: pointer;
 }

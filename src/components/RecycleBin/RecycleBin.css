@@ -1,7 +1,7 @@
 .wholeWindow {
   border: 3px solid;
   border-color: #f1f1f1; 
-  width: 500px;
+  width: 550px;
   height: 700px;
   background-color: white;
   position: absolute;
@@ -12,10 +12,6 @@
   border-color: #c8c8c8;
   width: 99%;
   height: 99%;
-}
-
-.exit {
-  cursor: pointer;
 }
 
 .documentBar {
@@ -93,4 +89,13 @@
 .textWindow p {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.iconList {
+  flex-direction: row;
+  display: flex;
+}
+
+.exit {
+  cursor: pointer;
 }
