@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
 import styles from './Clippy.css';
-import ClippyGif from '../../../assets/1zfr.gif'
+import ClippyGif from '../../../assets/1zfr.gif';
 
 export default function Clippy({ handlePortfolioClick }) {
 

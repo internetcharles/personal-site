@@ -4,6 +4,7 @@ import {
   Route, 
   Switch,
 } from 'react-router-dom';
+import Cube from '../Cube/Cube';
 import Desktop from '../Desktop/Desktop';
 import BootScreen from './Bootup/BootScreen';
 
