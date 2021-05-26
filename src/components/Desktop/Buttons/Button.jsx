@@ -4,7 +4,7 @@ import styles from './Button.css';
 import PropTypes from 'prop-types';
 import Draggable from 'react-draggable';
 
-export default function Button({ src, name, handlePortfolioClick, handleResumeClick, handleAboutClick, handlePaintClick, handleRecycleClick, section }) {
+export default function Button({ src, name, handlePortfolioClick, handleResumeClick, handleAboutClick, handleCubeClick, handlePaintClick, handleRecycleClick, section }) {
 
   const [clicked, setClicked] = useState(false);
   const [iconStyle, setIconStyle] = useState(false);
@@ -42,6 +42,9 @@ export default function Button({ src, name, handlePortfolioClick, handleResumeCl
       case 'recycle':
         handleRecycleClick();
         break;
+      case 'cube':
+        handleCubeClick();
+        break;
     }
   };
 
@@ -75,6 +78,9 @@ Button.propTypes = {
   handlePortfolioClick: PropTypes.func,
   handleResumeClick: PropTypes.func,
   handleAboutClick: PropTypes.func,
+  handleCubeClick: PropTypes.func,
+  handlePaintClick: PropTypes.func,
+  handleRecycleClick: PropTypes.func,
   section: PropTypes.string
 };
 
