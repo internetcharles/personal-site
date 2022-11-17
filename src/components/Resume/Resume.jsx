@@ -9,11 +9,9 @@ import MinimizeButton from '../../assets/minimise-btn.jpg';
 import IconOne from '../../assets/Icon_1.ico';
 import ResumePDF from '../../assets/resume.pdf';
 
-
 export default function Resume({ handleResumeClick }) {
-  return (
-    window ? <Draggable
-      defaultPosition={{ x: 150, y: 100 }}>
+  return window ? (
+    <Draggable defaultPosition={{ x: 150, y: 100 }}>
       <div className={styles.wholeWindow}>
         <div className={styles.innerBorder}>
           <div className={styles.documentBar}>
@@ -31,10 +29,12 @@ export default function Resume({ handleResumeClick }) {
             <div>Help</div>
           </div>
           <div className={styles.textWindow}>
-            <p>Here is a link to my fancy <a href={ResumePDF}>RESUME</a>.</p>
+            <p>
+              Here is a link to my fancy <a href={ResumePDF}>RESUME</a>.
+            </p>
           </div>
         </div>
       </div>
-    </Draggable> : null
-  );
+    </Draggable>
+  ) : null;
 }
